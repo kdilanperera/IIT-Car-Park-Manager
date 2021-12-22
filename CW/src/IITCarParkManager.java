@@ -261,7 +261,7 @@ public class IITCarParkManager implements CarParkManager {
 
     @Override
     public void printLongest(ArrayList<Vehicle> common) {
-        System.out.println("The Vehicle tat is parked the longest is"+common.get(common.size()-1))
+        System.out.println("The Vehicle tat is parked the longest is"+common.get(common.size()-1));
 
     }
 
