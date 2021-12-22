@@ -260,7 +260,8 @@ public class IITCarParkManager implements CarParkManager {
     }
 
     @Override
-    public void printLongest() {
+    public void printLongest(ArrayList<Vehicle> common) {
+        System.out.println("The Vehicle tat is parked the longest is"+common.get(common.size()-1))
 
     }
 
@@ -300,21 +301,6 @@ public class IITCarParkManager implements CarParkManager {
                 } else{
                     total = years + months + days + hours;
                 }
-//                else if (months >= 0 && days >= 0 && hours <= 0) {
-//                    total = years + months + days - hours;
-//                } else if (months >= 0 && days <= 0 && hours >= 0) {
-//                    total = years + months - days + hours;
-//                } else if (months <= 0 && days >= 0 && hours >= 0) {
-//                    total = years - months + days + hours;
-//                } else if (months >= 0 && days <= 0 && hours <= 0) {
-//                    total = years + months - days - hours;
-//                } else if (months <= 0 && days <= 0 && hours >= 0) {
-//                    total = years - months - days + hours;
-//                } else if (months <= 0 && days >= 0 && hours <= 0) {
-//                    total = years - months + days - hours;
-//                } else if (months <= 0 && days <= 0 && days <= 0) {
-//                    total = years - months - days - hours;
-//                }
 
                     if (total <= 3) {
                         System.out.println(total);
@@ -442,7 +428,7 @@ public class IITCarParkManager implements CarParkManager {
                     CarParkManager.printPercentage(common);
                     break;
                 case 5:
-                    CarParkManager.printLongest();
+                    CarParkManager.printLongest(common);
                     CarParkManager.printLastVehicle(common);
                     break;
 
